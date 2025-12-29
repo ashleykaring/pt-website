@@ -33,13 +33,13 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-4 text-sm leading-relaxed text-black/70">
-              Peak Performance PT was founded by Alyssa and her husband,
-              inspired by Alyssa’s experience dealing with recurring ankle
-              injuries. Those challenges led her to pursue physical therapy and
-              shaped her belief that rehab should do more than reduce pain — it
-              should build strength, resilience, and confidence. Today, Peak
-              Performance PT exists to help athletes overcome injury and perform
-              at their best.
+              Peak Performance PT was founded by Alyssa and her husband, Dylan
+              Efron, inspired by Alyssa’s experience dealing with recurring
+              ankle injuries. Those challenges led her to pursue physical
+              therapy and shaped her belief that rehab should do more than
+              reduce pain — it should build strength, resilience, and
+              confidence. Today, Peak Performance PT exists to help athletes
+              overcome injury and perform at their best.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-black/70">
