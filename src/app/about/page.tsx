@@ -29,7 +29,7 @@ export default function AboutPage() {
 
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              Performance-first physical therapy
+              Inspiration from Injury
             </h2>
 
             <p className="mt-4 text-sm leading-relaxed text-black/70">

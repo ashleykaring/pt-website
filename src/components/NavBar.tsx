@@ -13,7 +13,7 @@ export default function NavBar() {
             height={32}
             className="rounded-full"
           />
-          <span className="text-m font-semibold tracking-wide text-black">
+          <span className="text-lg font-bold tracking-wide text-black">
             Peak Performance PT
           </span>
         </Link>
