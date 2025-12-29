@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Peak Performance PT",
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-black">
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
