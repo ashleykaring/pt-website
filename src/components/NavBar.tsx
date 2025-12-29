@@ -1,10 +1,18 @@
+import Image from "next/image";
+
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-black" />
-          <span className="text-sm font-semibold tracking-wide">
+          <Image
+            src="/icon.png"
+            alt="Logo"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
+          <span className="text-m font-semibold tracking-wide text-black">
             Peak Performance PT
           </span>
         </div>

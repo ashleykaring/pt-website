@@ -104,7 +104,9 @@ export default function Home() {
               Send
             </button>
 
-            <p className="text-xs text-white/50">(Demo)</p>
+            <p className="text-xs text-white/50">
+              (Response within 1000 business days)
+            </p>
           </form>
         </div>
       </section>

@@ -3,20 +3,18 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <Image
           src="/hero.jpg"
-          alt="High performance athlete training"
+          alt="Athlete training"
           fill
           priority
           className="object-cover"
         />
-        {/* Overlay for readability */}
+        {/* overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
       </div>
 
-      {/* Content */}
       <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
         <div className="max-w-2xl">
           <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-medium text-white ring-1 ring-white/20">
