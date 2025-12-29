@@ -1,65 +1,113 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+
+function Section({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="mx-auto max-w-6xl px-4 py-16">
+      <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
+      <div className="mt-6 text-black/70">{children}</div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main>
+      <Hero />
+
+      <Section id="services" title="Services">
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            {
+              title: "Injury Rehab",
+              desc: "A plan built around your sport, your goals, and your timeline.",
+            },
+            {
+              title: "Performance Movement",
+              desc: "Strength + mobility + mechanics to improve output and reduce risk.",
+            },
+            {
+              title: "Return-to-Sport",
+              desc: "Objective testing and progressive loading so you come back confident.",
+            },
+          ].map((c) => (
+            <div
+              key={c.title}
+              className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              <div className="text-sm font-semibold text-black">{c.title}</div>
+              <p className="mt-2 text-sm leading-relaxed">{c.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section id="athletes" title="Built for athletes">
+        <p className="max-w-2xl text-sm leading-relaxed">
+          Whether you’re a runner, lifter, field athlete, or weekend competitor,
+          we blend rehab with performance training so you don’t just “feel
+          better”—you move better.
+        </p>
+      </Section>
+
+      <Section id="results" title="What you can expect">
+        <ul className="grid gap-3 text-sm md:grid-cols-2">
+          <li className="rounded-2xl border border-black/10 p-5">
+            Clear plan and timeline after your evaluation
+          </li>
+          <li className="rounded-2xl border border-black/10 p-5">
+            Strength + mobility integrated into every phase
+          </li>
+          <li className="rounded-2xl border border-black/10 p-5">
+            Sport-specific progressions (not generic handouts)
+          </li>
+          <li className="rounded-2xl border border-black/10 p-5">
+            Return-to-sport criteria you can trust
+          </li>
+        </ul>
+      </Section>
+
+      <section id="contact" className="border-t border-black/10 bg-black">
+        <div className="mx-auto max-w-6xl px-4 py-16 text-white">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Book a free consult
+          </h2>
+          <p className="mt-4 max-w-2xl text-white/75">
+            Send a quick message and we’ll reply with next steps and
+            availability.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <form className="mt-8 grid gap-4 md:max-w-xl">
+            <input
+              className="w-full rounded-2xl bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/50 ring-1 ring-white/15 outline-none focus:ring-white/30"
+              placeholder="Name"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <input
+              className="w-full rounded-2xl bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/50 ring-1 ring-white/15 outline-none focus:ring-white/30"
+              placeholder="Email"
+            />
+            <textarea
+              className="min-h-28 w-full rounded-2xl bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/50 ring-1 ring-white/15 outline-none focus:ring-white/30"
+              placeholder="What are you training for / dealing with?"
+            />
+            <button
+              type="button"
+              className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90"
+            >
+              Send
+            </button>
+
+            <p className="text-xs text-white/50">(Demo)</p>
+          </form>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
