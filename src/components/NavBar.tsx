@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -18,33 +19,33 @@ export default function NavBar() {
         </div>
 
         <nav className="hidden items-center gap-6 text-sm md:flex">
-          <a className="text-black/70 hover:text-black" href="#services">
+          <Link className="text-black/70 hover:text-black" href="/">
             Services
-          </a>
-          <a className="text-black/70 hover:text-black" href="#athletes">
-            For Athletes
-          </a>
-          <a className="text-black/70 hover:text-black" href="#results">
+          </Link>
+          <Link className="text-black/70 hover:text-black" href="/">
             Results
-          </a>
-          <a className="text-black/70 hover:text-black" href="#contact">
+          </Link>
+          <Link className="text-black/70 hover:text-black" href="/about">
+            About Us
+          </Link>
+          <Link className="text-black/70 hover:text-black" href="/contact">
             Contact
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
+          <Link
             className="rounded-xl px-4 py-2 text-sm font-medium text-black/80 hover:bg-black/5"
-            href="#contact"
+            href="/contact"
           >
             Book
-          </a>
-          <a
+          </Link>
+          <Link
             className="rounded-xl bg-black px-4 py-2 text-sm font-medium text-white hover:bg-black/90"
-            href="#contact"
+            href="/contact"
           >
             Free Consult
-          </a>
+          </Link>
         </div>
       </div>
     </header>
